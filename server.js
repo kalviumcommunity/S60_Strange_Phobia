@@ -1,10 +1,10 @@
 // console.log("hi")
 
 const exp = require("express")
-const App = exp()
+const useExp = exp()
 
-App.listen(3000,()=>{console.log("3000")})
+useExp.listen(3000,()=>{console.log("3000")})
 
-App.get("/ping",(req,res)=>{
+useExp.get("/ping",(req,res)=>{
     res.send("message")
 })
