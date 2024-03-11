@@ -1,16 +1,16 @@
 // console.log("hi")
 
-const exp = require("express")
-const useExp = exp()
+const exp = require("express");
+const useExp = exp();
 
-useExp.get("/",(req,res)=>{
-    res.send("basic message")
-})
-useExp.get("/",(req,res)=>{
-    res.send("message")
-})
-useExp.use(exp.static('public'));
+useExp.get("/", (req, res) => {
+  res.send("basic message");
+});
 
-useExp.listen(3000,()=>{console.log("3000")});
+useExp.get("/ping", (req, res) => {
+  res.send("message");
+});
 
-
+useExp.listen(3000, () => {
+  console.log("Server is running on 3000");
+});
